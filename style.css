@@ -1,0 +1,88 @@
+/*CSS reset*/
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+body{
+    font-family: cursive, sans-serif;
+}
+nav{
+    display: flex;
+    background: black;
+    color: white;
+    justify-content: space-between;
+    align-items: center;
+}
+ nav .logo{
+    font-size: 20px;
+    margin-left: 25px;
+    cursor: pointer;
+}
+nav .mainmenu{
+    display: flex;
+    list-style: none;
+}
+nav .mainmenu li a {
+    display: inline-block;
+    padding: 15px;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: white;
+    font-size: 18px;
+}
+nav .mainmenu li a:hover{
+    background:tomato
+}
+nav .openmenu{
+    font-size: 2rem;
+    margin:20px;
+    cursor: pointer;
+    display: none;
+}
+nav .mainmenu .closemenu ,.icons i{
+    font-size: 2rem;
+    display: none;
+    cursor: pointer;
+}
+.fa-facebook:hover{color:rgb(0, 110, 255)}
+.fa-instagram:hover{color:rgb(224, 55, 202)}
+.fa-twitter:hover{color:rgb(65, 188, 236)}
+.fa-github:hover{color:rgb(21, 158, 32)}
+
+@media(max-width:800px){
+      nav .mainmenu{
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 10;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background: #000;
+        transition: top 1s ease;
+        display: none;
+
+    }
+
+    nav .mainmenu .closemenu{
+        display: block;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+    }
+    nav .openmenu{
+        display: block;
+    }
+    nav .mainmenu li a:hover{
+        background: none;
+        color: tomato;
+        font-size: 1.6rem;
+    }
+    .icons i {
+        display: inline-block;
+        padding: 12px;
+    }
+}
